@@ -1,0 +1,206 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0px;
+  box-sizing: border-box;
+  font-family: "monospace", "cursive";
+  color: #000;
+}
+
+body {
+  background-color: rgb(236, 212, 179);
+}
+
+.calculator::before {
+  content: "✚ *";
+  position: absolute;
+  margin: -48px -53px;
+  transform: rotate(-15deg);
+  color: #ffffff;
+  font-size: 28px;
+}
+
+.calculator::after {
+  content: "✚ *";
+  position: absolute;
+  margin: 2px 334px;
+  transform: rotate(28deg);
+  color: #ffffff;
+  font-size: 25px;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  /* outline: 1.5px solid #213a16b8; */
+  box-shadow: 0 0 0 1.5px #213a16b8;
+  background-color: #477d30b8;
+  width: 350px;
+  height: 500px;
+  border-radius: 10px;
+  padding: 30px 20px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.calculator_bare {
+  /* outline: 1.5px solid #4f753db8; */
+  box-shadow: 0 0 0 1.5px #4f753db8;
+  text-align: right;
+  vertical-align: center;
+  height: 100px;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 25px 15px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  background-color: #fbfff9f7;
+  background-image: linear-gradient(to left, #ffe6c8b8 3%, rgba(255, 255, 255, 0));
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding-right: 22px;
+}
+
+.calculator_bare > span {
+  display: inline-block;
+  text-align: center;
+  /* background-color: #f3f0fc; */
+  margin: 5px;
+  width: 40px;
+  height: 45px;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 10px 5px;
+  color: #382b08;
+}
+
+.calculator_buttons {
+  flex-shrink: 0;
+  /* outline: 1.5px solid #4f753db8; */
+  box-shadow: 0 0 0 1.5px #4f753db8;
+  width: 100%;
+  height: 330px;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #fbfff9f7;
+  background-image: linear-gradient(to left, #ffe6c8b8 15%, rgba(255, 255, 255, 0));
+}
+
+.clear_and_enter {
+  height: 50px;
+  margin: 10px 5px 10px 5px;
+  /* background-color: #ffffff; */
+  border-radius: 5px;
+}
+
+.clear_and_enter > button {
+  border-radius: 10px;
+  width: 120px;
+  height: 40px;
+  margin: 5px 5.8px;
+  background-color: #ffab52;
+  cursor: pointer;
+  outline: none;
+  border: 1.5px solid #7a6831;
+  border-bottom: 3px solid #7a6831;
+  color: #47370c;
+}
+
+.button_row {
+  height: 50px;
+  margin: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button_row > button {
+  width: 62.7px;
+  height: 40px;
+  margin-top: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  background-color: #fff3e7;
+  color: #382b08;
+}
+
+.button_row > .operator {
+  color: #ffffff;
+  background-color: #382b08;
+}
+
+.button_row > .number,
+.decimal {
+  border: 1.5px solid #c0b697;
+  border-bottom: 3px solid #c0b697;
+}
+
+.button_row > button.operator {
+  background-color: #ffab52;
+  color: #fff3e7;
+  border: 1.5px solid #5f5023;
+  border-bottom: 3px solid #5f5023;
+}
+
+.button_row > .double {
+  width: 121px;
+}
+
+.calculator_buttons > .button_row:last-child > button {
+  margin-left: 2px;
+}
+
+.clear_and_enter > button:first-child {
+  margin-left: 11px;
+}
+
+.clear_and_enter > button:hover,
+.clear_and_enter > button:active,
+.clear_and_enter > button:focus {
+  color: #fff3e7;
+  border: 1.5px solid #5f5023;
+  border-bottom: 3px solid #5f5023;
+  background-color: #6ba177;
+  transition: 0.1s ease-in;
+}
+
+.button_row > .number:hover,
+.button_row > .number:active,
+.button_row > .number:focus {
+  color: #fff3e7;
+  border: 1.5px solid #5f5023;
+  border-bottom: 3px solid #5f5023;
+  background-color: #6ba177;
+  transition: 0.1s ease-in;
+}
+
+.button_row > button.operator:hover,
+.button_row > button.operator:active,
+.button_row > button.operator:focus {
+  color: #fff3e7;
+  border: 1.5px solid #5f5023;
+  border-bottom: 3px solid #5f5023;
+  background-color: #6ba177;
+  transition: 0.1s ease-in;
+}
+
+.button_row > .decimal:hover,
+.button_row > .decimal:active,
+.button_row > .decimal:focus {
+  color: #fff3e7;
+  border: 1.5px solid #5f5023;
+  border-bottom: 3px solid #5f5023;
+  background-color: #6ba177;
+  transition: 0.1s ease-in;
+}
